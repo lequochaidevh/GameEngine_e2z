@@ -3,17 +3,10 @@
 
 namespace VIEngine {
     Application::Application(const ApplicationConfiguration& config) : mConfig(config) {
-        Logger::Init();
-		CORE_LOG_INFO("Info works:");
-		CORE_LOG_TRACE("Trace works");
-		CORE_LOG_WARN("Warn works");
-		CORE_LOG_ERROR("Error works");
-        CORE_LOG_CRITICAL("Critical works");
-        
+		//Logger::Init();
 	}
-
 	void Application::Run() {
-		std::cout << "App is running: " << mConfig.Width << ", " << mConfig.Height << ", " << mConfig.Title << std::endl;
+		CORE_LOG_INFO("App is running: ({0}, {1}, {2})", mConfig.Width, mConfig.Height, mConfig.Title);
 	}
 		
 }
