@@ -39,13 +39,13 @@ include CMakeFiles\rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug\
+cmake_ninja_workdir = D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug\
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -56,7 +56,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine -BD:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine -BD:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -65,7 +65,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/241002_LearningPrograming/241004_VScodeCmakeGit/GameEngine/GameEngine/CMakeLists.txt
+# D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -77,11 +77,36 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_VIEngine: phony || .
 
-build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\VIEngine\Core\Application.cpp || cmake_object_order_depends_target_VIEngine
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI
-  INCLUDES = -ID:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\DYNAMIC_LIB=0 -ID:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\DYNAMIC_BUILD=0 -ID:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\VIEngine
+build Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug\Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx | Engine\CMakeFiles\VIEngine.dir\cmake_pch.hxx || cmake_object_order_depends_target_VIEngine
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YcD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\VIEngine -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Vendors\include
+  OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir
+  OBJECT_FILE_DIR = Engine\CMakeFiles\VIEngine.dir
+  TARGET_COMPILE_PDB = Engine\CMakeFiles\VIEngine.dir\VIEngine.pdb
+  TARGET_PDB = Engine\VIEngine.pdb
+
+
+#############################################
+# Additional output files.
+
+build Engine\CMakeFiles\VIEngine.dir\.\cmake_pch.cxx.pch: phony Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.obj
+
+build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\VIEngine\Core\Application.cpp | Engine\CMakeFiles\VIEngine.dir\cmake_pch.hxx Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_VIEngine
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\VIEngine -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Vendors\include
   OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir
   OBJECT_FILE_DIR = Engine\CMakeFiles\VIEngine.dir\VIEngine\Core
+  TARGET_COMPILE_PDB = Engine\CMakeFiles\VIEngine.dir\VIEngine.pdb
+  TARGET_PDB = Engine\VIEngine.pdb
+
+build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Logger\Logger.cpp.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\VIEngine\Core\Logger\Logger.cpp | Engine\CMakeFiles\VIEngine.dir\cmake_pch.hxx Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_VIEngine
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\VIEngine -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Vendors\include
+  OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir
+  OBJECT_FILE_DIR = Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Logger
   TARGET_COMPILE_PDB = Engine\CMakeFiles\VIEngine.dir\VIEngine.pdb
   TARGET_PDB = Engine\VIEngine.pdb
 
@@ -93,7 +118,7 @@ build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj: CXX_COMP
 #############################################
 # Link the static library Engine\VIEngine.lib
 
-build Engine\VIEngine.lib: CXX_STATIC_LIBRARY_LINKER__VIEngine_Debug Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj
+build Engine\VIEngine.lib: CXX_STATIC_LIBRARY_LINKER__VIEngine_Debug Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Logger\Logger.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir
@@ -108,7 +133,7 @@ build Engine\VIEngine.lib: CXX_STATIC_LIBRARY_LINKER__VIEngine_Debug Engine\CMak
 # Utility command for edit_cache
 
 build Engine\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug\Engine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug\Engine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -119,7 +144,7 @@ build Engine\edit_cache: phony Engine\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build Engine\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug\Engine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine -BD:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug\Engine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine -BD:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -128,7 +153,7 @@ build Engine\rebuild_cache: phony Engine\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/241002_LearningPrograming/241004_VScodeCmakeGit/GameEngine/GameEngine/CMakeLists.txt
+# D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -140,9 +165,25 @@ build Engine\rebuild_cache: phony Engine\CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_Game: phony || cmake_object_order_depends_target_VIEngine
 
-build Game\CMakeFiles\Game.dir\Source\Game.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Game\Source\Game.cpp || cmake_object_order_depends_target_Game
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI
-  INCLUDES = -ID:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine -ID:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\DYNAMIC_LIB=0 -ID:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\DYNAMIC_BUILD=0 -ID:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\VIEngine
+build Game\CMakeFiles\Game.dir\cmake_pch.cxx.obj: CXX_COMPILER__Game_unscanned_Debug D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug\Game\CMakeFiles\Game.dir\cmake_pch.cxx | Game\CMakeFiles\Game.dir\cmake_pch.hxx || cmake_object_order_depends_target_Game
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YcD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\VIEngine -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Vendors\include
+  OBJECT_DIR = Game\CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir
+  TARGET_COMPILE_PDB = Game\CMakeFiles\Game.dir\
+  TARGET_PDB = Game\Game.pdb
+
+
+#############################################
+# Additional output files.
+
+build Game\CMakeFiles\Game.dir\.\cmake_pch.cxx.pch: phony Game\CMakeFiles\Game.dir\cmake_pch.cxx.obj
+
+build Game\CMakeFiles\Game.dir\Source\Game.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Game\Source\Game.cpp | Game\CMakeFiles\Game.dir\cmake_pch.hxx Game\CMakeFiles\Game.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_Game
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\VIEngine -ID:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Vendors\include
   OBJECT_DIR = Game\CMakeFiles\Game.dir
   OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\Source
   TARGET_COMPILE_PDB = Game\CMakeFiles\Game.dir\
@@ -156,10 +197,11 @@ build Game\CMakeFiles\Game.dir\Source\Game.cpp.obj: CXX_COMPILER__Game_unscanned
 #############################################
 # Link the executable Game\Game.exe
 
-build Game\Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug Game\CMakeFiles\Game.dir\Source\Game.cpp.obj | Engine\VIEngine.lib || Engine\VIEngine.lib
+build Game\Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug Game\CMakeFiles\Game.dir\cmake_pch.cxx.obj Game\CMakeFiles\Game.dir\Source\Game.cpp.obj | Engine\VIEngine.lib || Engine\VIEngine.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = Engine\VIEngine.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = Engine\VIEngine.lib  spdlogd.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_PATH = -LIBPATH:D:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Vendors\bin
   OBJECT_DIR = Game\CMakeFiles\Game.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -173,7 +215,7 @@ build Game\Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug Game\CMakeFiles\Game.dir\
 # Utility command for edit_cache
 
 build Game\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug\Game && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug\Game && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -184,7 +226,7 @@ build Game\edit_cache: phony Game\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build Game\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug\Game && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine -BD:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\out\build\x64-debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug\Game && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine -BD:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\out\build\x64-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -208,21 +250,21 @@ build VIEngine.lib: phony Engine\VIEngine.lib
 # =============================================================================
 
 #############################################
-# Folder: D:/241002_LearningPrograming/241004_VScodeCmakeGit/GameEngine/GameEngine/out/build/x64-debug
+# Folder: D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug
 
 build all: phony Engine\all Game\all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/241002_LearningPrograming/241004_VScodeCmakeGit/GameEngine/GameEngine/out/build/x64-debug/Engine
+# Folder: D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Engine
 
 build Engine\all: phony Engine\VIEngine.lib
 
 # =============================================================================
 
 #############################################
-# Folder: D:/241002_LearningPrograming/241004_VScodeCmakeGit/GameEngine/GameEngine/out/build/x64-debug/Game
+# Folder: D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game
 
 build Game\all: phony Game\Game.exe
 
@@ -233,14 +275,14 @@ build Game\all: phony Game\Game.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\CMakeLists.txt D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\CMakeLists.txt D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Game\CMakeLists.txt
+build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\CMakeLists.txt D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\CMakeLists.txt D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Game\CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\CMakeLists.txt D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Engine\CMakeLists.txt D$:\241002_LearningPrograming\241004_VScodeCmakeGit\GameEngine\GameEngine\Game\CMakeLists.txt: phony
+build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\CMakeLists.txt D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Engine\CMakeLists.txt D$:\241002_LearningPrograming\241005_SetupLogger\GameEngine\GameEngine\Game\CMakeLists.txt: phony
 
 
 #############################################

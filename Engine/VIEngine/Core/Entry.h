@@ -1,5 +1,8 @@
-#include "Application.h"
-#include<iostream>
+#pragma once
+
+#include"Application.h"
+
+
 int main() {
 	std::cout << "Main Entry.h\n";
 	VIEngine::Application* application = VIEngine::CreateApplication();
@@ -11,5 +14,6 @@ int main() {
 
 	application->Shutdown();
 	delete application;
+
 	return 0;
 }
