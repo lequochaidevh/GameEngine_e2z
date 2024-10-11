@@ -1,10 +1,7 @@
 #pragma once
 
-#include<spdlog/spdlog.h>
-#include<spdlog/common.h>
-
 #include<spdlog/fmt/ostr.h>
-#include<spdlog/sinks/stdout_color_sinks.h>
+#include"spdlog/sinks/stdout_color_sinks.h"
 #include"pch.h"
 
 namespace VI_API VIEngine {

@@ -1,4 +1,7 @@
+#include"spdlog/spdlog.h"
 #include"Logger.h"
+
+#include"spdlog/common.h"
 
 namespace VIEngine {
 	Shared<spdlog::logger> Logger::sCoreLogger = nullptr;
