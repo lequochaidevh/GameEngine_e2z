@@ -1,6 +1,9 @@
 #include"VIEngine/Core/Entry.h"
 #include"Core/Logger/Logger.h"
 #include"VIEngine/Window/Window.h"
+
+/*2_Make Client*/
+/*2.1_Define Client config*/
 class Game : public VIEngine::Application {
 public:
 	Game(const VIEngine::ApplicationConfiguration& config) : VIEngine::Application(config) {
@@ -15,9 +18,8 @@ public:
 
 };
 VIEngine::Application* VIEngine::CreateApplication() {
-	//
+	/*2.2_Client init config for Application*/
 	VIEngine::ApplicationConfiguration appConfig;
-	//LOG_INFO("Start CreateApplication >> Game.cpp");
 	appConfig.Width = 800;
 	appConfig.Height = 600;
 	appConfig.Title = "VIEngine Alpha ver";

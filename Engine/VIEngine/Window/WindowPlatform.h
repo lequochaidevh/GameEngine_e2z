@@ -4,6 +4,8 @@
 
 namespace VIEngine {
 	//Factory class
+/*6.2.3_Create WindowPlatform*/
+
 	class  WindowPlatform
 	{
 	public:

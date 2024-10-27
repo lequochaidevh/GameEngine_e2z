@@ -1,0 +1,14 @@
+[open directory: Vendors founder]
+git submodule add https://github.com/glfw/glfw.git
+[VSCode2022 setup]
+
+[url: https://gen.glad.sh/]
+[
+ - <Generator>: C/C++
+ - <APIs>:<gl>: Version 4.3 -> <compatibility> Core
+ - 
+ - <Options>: header only
+ - -> GENERATE
+ - [coppy: gl.h - add it to directory: {}/{}/Vendors/include/glad]
+]
+

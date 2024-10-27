@@ -1,14 +1,16 @@
 #pragma once
-
+/*3_Conect point between APPLICATION and CLIENT*/
 #include"Application.h"
 
 
 int main() {
 	VIEngine::Logger::Init();
 	CORE_LOG_INFO("Main >> Entry.h");
-	VIEngine::Application* application = VIEngine::CreateApplication();
+	/*3.1_Start Client: Game*/
+	VIEngine::Application* application = VIEngine::CreateApplication(); // Application->Client: Game with config
 	CORE_LOG_INFO("After CreateApplication >> Entry.h");
-	if (application->Init()) {
+	if (application->Init())
+	{
 		CORE_LOG_INFO("Init VIEngine::Application >> Entry.h");
 		application->Run();
 	}

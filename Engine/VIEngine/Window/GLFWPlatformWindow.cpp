@@ -3,10 +3,11 @@
 #include "pch.h"
 #include "Core/Logger/Logger.h"
 #include "Core/Application.h"
+/*6.1.1_Add and define glad and glfw at file.cpp(obligatory)*/
 #define GLFW_GL_IMPLEMENTATION
 #include <glad/gl.h>
 #include<GLFW/glfw3.h>
-
+/*6.2.2_Create GLFWPlatform*/
 namespace VIEngine {
 	GLFWPlatformWindow::GLFWPlatformWindow() : mWindow(nullptr) {
 
@@ -14,7 +15,7 @@ namespace VIEngine {
 	GLFWPlatformWindow::~GLFWPlatformWindow() {
 		
 	}
-	bool GLFWPlatformWindow::Init(const ApplicationConfiguration& config) {
+	bool GLFWPlatformWindow::Init(const ApplicationConfiguration& config, EventDispatcher* eventDistpatcher) {
 		if (!glfwInit()) {
 			CORE_LOG_CRITICAL("GLFW Init failed");
 			glfwTerminate();
@@ -36,6 +37,20 @@ namespace VIEngine {
 		CORE_LOG_INFO("Window created success");
 		
 		glfwMakeContextCurrent(mWindow);
+		/*8.3.7.1_Convert data mEventDispatcher->mData.Dispatcher to refer value into glfwSetWindowSizeCallback(...)*/
+		mData.dispatcher = eventDistpatcher;
+
+		glfwSetWindowUserPointer(mWindow, &mData);
+		//because the lambda not capture data by reference
+		glfwSetWindowSizeCallback(mWindow, [](GLFWwindow* window, int width, int height) {
+			glViewport(0, 0, width, height);
+			//get data* from EventDispatcher
+			WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
+			data->width = width;
+			data->height = height;
+			WindowResizedEvent eventContext(width, height);
+			data->dispatcher->dispatchListener<WindowResizedEvent>(eventContext);
+			});
 
 		//Check to see if window can successfully interact
 		if (!gladLoadGL((GLADloadfunc)glfwGetProcAddress)) {

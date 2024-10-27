@@ -1,0 +1,10 @@
+git clone https://github.com/gabime/spdlog.git
+cd spdlog
+mkdir build
+cd build
+cmake ..
+[open spdlog.sln by VisualStudio2022]
+[choose->mode: Debugbuild -> Build Solution]
+[at Dir Debug file have: 2 file spdlogd.lib and spdlogd.pdb]
+[coppy it to GameEngine/Vendors/bin]
+[coppy {prjName}/spdlog/inlude/spdlog FILE to {prjName}/GameEngine/Vendors/include FOUNDER]
