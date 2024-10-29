@@ -1,8 +1,13 @@
 #pragma once
 
 #include "pch.h"
-/*8_Create Event*/
 
+/*11.2.3_Define Macro IS */
+#include"Core/Input/KeyCode.h"
+#define IS_KEY VI_FORCE_INLINE bool isKey(EKeyCode keyCode) const { return mKeyCode == (int32_t)keyCode; } ;
+#define IS_BUTTON VI_FORCE_INLINE bool isButton(EMouseButton button) const { return mButton == (int32_t)button; } ;
+
+/*8_Create Event*/
 namespace VIEngine {
 	/*8.1_Create interface EventContext*/
 	class VI_API EventContext {
@@ -24,6 +29,8 @@ namespace VIEngine {
 	public:
 		KeyPressedEvent(int32_t keyCode) : mKeyCode(keyCode) {}
 		VI_FORCE_INLINE int32_t getKeyCode() const { return mKeyCode; }
+		VI_FORCE_INLINE int32_t getKey() const { return mKeyCode; }
+		IS_KEY;
 	private:
 		int32_t mKeyCode;
 	};
@@ -32,6 +39,8 @@ namespace VIEngine {
 	public:
 		KeyHeldEvent(int32_t keyCode) : mKeyCode(keyCode) {}
 		VI_FORCE_INLINE int32_t getKeyCode() const { return mKeyCode; }
+		VI_FORCE_INLINE int32_t getKey() const { return mKeyCode; }
+		IS_KEY;
 	private:
 		int32_t mKeyCode;
 	};
@@ -40,15 +49,17 @@ namespace VIEngine {
 	public:
 		KeyReleasedEvent(int32_t keyCode) : mKeyCode(keyCode) {}
 		VI_FORCE_INLINE int32_t getKeyCode() const { return mKeyCode; }
+		VI_FORCE_INLINE int32_t getKey() const { return mKeyCode; }
+		IS_KEY;
 	private:
 		int32_t mKeyCode;
 	};
 
 	class VI_API MouseMovedEvent : public EventContext {
 	public:
-		MouseMovedEvent(double x, double y, double offsetX, double offsetY) :
-			xPosition(x), yPosition(y),
-			xOffset(offsetX), yOffset(offsetY) {}
+		MouseMovedEvent(double x, double y, double offsetX, double offsetY) : 
+		xPosition(x), yPosition(y),
+		xOffset(offsetX), yOffset(offsetY) {}
 		VI_FORCE_INLINE double getPositionX() const { return xPosition; }
 		VI_FORCE_INLINE double getPositionY() const { return yPosition; }
 		VI_FORCE_INLINE double getOffsetX() const { return xOffset; }
@@ -71,6 +82,7 @@ namespace VIEngine {
 	public:
 		MouseButtonPressedEvent(int32_t button) : mButton(button) {}
 		VI_FORCE_INLINE int32_t getButton() const { return mButton; }
+		IS_BUTTON;
 	private:
 		int32_t mButton;
 	};
@@ -79,6 +91,7 @@ namespace VIEngine {
 	public:
 		MouseButtonHeldEvent(int32_t button) : mButton(button) {}
 		VI_FORCE_INLINE int32_t getButton() const { return mButton; }
+		IS_BUTTON;
 	private:
 		int32_t mButton;
 	};
@@ -87,6 +100,7 @@ namespace VIEngine {
 	public:
 		MouseButtonReleasedEvent(int32_t button) : mButton(button) {}
 		VI_FORCE_INLINE int32_t getButton() const { return mButton; }
+		IS_BUTTON;
 	private:
 		int32_t mButton;
 	};

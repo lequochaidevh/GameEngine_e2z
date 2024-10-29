@@ -126,7 +126,7 @@ namespace VIEngine {
 	bool GLFWPlatformWindow::ShouldClose() {
 		return glfwWindowShouldClose(mWindow);
 	}
-	InputState* GLFWPlatformWindow::GetInputState() {
+	InputState* GLFWPlatformWindow::getInputState() {
 		return &mData.input;
 	}
 }

@@ -44,7 +44,7 @@ namespace VIEngine {
 		virtual void PollsEvent() = 0;
 		virtual bool ShouldClose() = 0;
 		/*9.1.2.3_InputState* GetInputState() */
-		virtual InputState* GetInputState() = 0;
+		virtual InputState* getInputState() = 0;
 		
 	private:
 
@@ -63,7 +63,7 @@ namespace VIEngine {
 		virtual void PollsEvent() override;
 		virtual bool ShouldClose() override;
 
-		virtual InputState* GetInputState() override;
+		virtual InputState* getInputState() override;
 
 	private:
 		GLFWwindow* mWindow;

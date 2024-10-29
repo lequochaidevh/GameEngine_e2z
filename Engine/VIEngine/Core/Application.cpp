@@ -4,12 +4,19 @@
 #include<GLFW/glfw3.h>
 #include "Window/WindowPlatform.h"
 
-//#include "Input/InputState.h"
+/*11.1.10_Define FUNC for iterator -> rend to rbegin at class have vector*/
+#define DISPATCH_LAYER_EVENT(eventType, eventContext) for (auto iter = mLayerStack->rbegin(); iter != mLayerStack->rend(); ++iter) {\
+	if ((*iter)->on##eventType(eventContext)) {\
+		break;\
+	}\
+}
+
 namespace VIEngine {
 	
-    Application::Application(const ApplicationConfiguration& config) : mConfig(config){//}, mEventDispatcher() {
-		//Logger::Init();
+    Application::Application(const ApplicationConfiguration& config) : mConfig(config) , mEventDispatcher() {
 		mNativeWindow.reset(WindowPlatform::Create(config.WindowSpec)); //reset unique_ptr
+		/*11.1.7_Add and Allocate Heap mLayerStack*/
+		mLayerStack.reset(new LayerStack()); 
 	}
 	bool Application::Init() {
 		
@@ -18,7 +25,7 @@ namespace VIEngine {
 			return false;
 		}
 		/*9.1.3.2_Set value mInputState */
-		mInputState = mNativeWindow->GetInputState();
+		mInputState = mNativeWindow->getInputState();
 		/*8.3.5_Add define mEventDispatcher.addEventListener*/
 		mEventDispatcher.addEventListener<WindowResizedEvent>(BIND_EVENT_FUNCTION(onWindowResizedEvent));
 
@@ -36,23 +43,22 @@ namespace VIEngine {
 	void Application::Run() {
 		CORE_LOG_INFO("App is running: ({0}, {1}, {2})", mConfig.Width, mConfig.Height, mConfig.Title);
 		OnInitClient();
-
+		/*11.1.9_Browse LayerStack class, this have vector*/
 		while (!mNativeWindow->ShouldClose()) {
 			mNativeWindow->Swapbuffers();
-			//if (mInputState->Mouse->IsPressed(EMouseButton::BUTTON_LEFT)) {
-			//	CORE_LOG_TRACE("Left mouse is clicked");
-			//}
-			//
-			//if (mInputState->Mouse->IsPressed(EMouseButton::BUTTON_RIGHT)) {
-			//	CORE_LOG_TRACE("Right mouse is clicked");
-			//}
-			//if (mInputState->Keyboard->IsPressed(EKeyCode::A)) {
-			//	CORE_LOG_TRACE("A key is pressed");
-			//}
-			//if (mInputState->Keyboard->IsReleased(EKeyCode::A)) {
-			//	CORE_LOG_TRACE("A key is released");
-			//}
+			/**/
+			for (auto layer : *mLayerStack.get()) {
+				layer->onProcessInput(*mInputState);
+			}
+
+			for (auto layer : *mLayerStack.get()) {
+				layer->onUpdate(0.0f);
+			}
+
 			mNativeWindow->PollsEvent();
+			for (auto layer : *mLayerStack.get()) {
+				layer->onRender();
+			}
 
 		}
 
@@ -62,49 +68,71 @@ namespace VIEngine {
 		mNativeWindow->Shutdown();
 	}
 
-	bool Application::onWindowResizedEvent(const WindowResizedEvent& windowResizedEvent){
-		CORE_LOG_TRACE("(Width : {0}, Height : {1})", windowResizedEvent.getWidth(), windowResizedEvent.getHeight());
-		return false;
-
-	}
+	
 	/*9.1.3.3_Define function onEvent*/
+	/*11.2.1_Add and Browse rend to rbegin class, this have vector*/
+	bool Application::onWindowResizedEvent(const WindowResizedEvent& eventContext) {
+		DISPATCH_LAYER_EVENT(WindowResizedEvent, eventContext);
+		return false;
+	}
+
 	bool Application::onKeyPressedEvent(const KeyPressedEvent& eventContext) {
-		CORE_LOG_TRACE("Key {0} is pressed", (char)eventContext.getKeyCode());
+		DISPATCH_LAYER_EVENT(KeyPressedEvent, eventContext);
 		return false;
 	}
 
 	bool Application::onKeyHeldEvent(const KeyHeldEvent& eventContext) {
-		CORE_LOG_TRACE("Key {0} is held", (char)eventContext.getKeyCode());
+		DISPATCH_LAYER_EVENT(KeyHeldEvent, eventContext);
 		return false;
 	}
 
 	bool Application::onKeyReleasedEvent(const KeyReleasedEvent& eventContext) {
-		CORE_LOG_TRACE("Key {0} is released", (char)eventContext.getKeyCode());
+		DISPATCH_LAYER_EVENT(KeyReleasedEvent, eventContext);
 		return false;
 	}
 
 	bool Application::onMouseMovedEvent(const MouseMovedEvent& eventContext) {
-		CORE_LOG_TRACE("Mouse position: {0}, {1}. Mouse relative: {2}, {3}", eventContext.getPositionX(), eventContext.getPositionY(), eventContext.getOffsetX(), eventContext.getOffsetY());
+		DISPATCH_LAYER_EVENT(MouseMovedEvent, eventContext);
 		return false;
 	}
 
 	bool Application::onMouseScrolledEvent(const MouseScrolledEvent& eventContext) {
-		CORE_LOG_TRACE("Mouse scroll X: {0}, Mouse Scroll Y: {1}", eventContext.getScrollX(), eventContext.getScrollY());
+		DISPATCH_LAYER_EVENT(MouseScrolledEvent, eventContext);
 		return false;
 	}
 
 	bool Application::onMouseButtonPressedEvent(const MouseButtonPressedEvent& eventContext) {
-		CORE_LOG_TRACE("Mouse button {0} is pressed", eventContext.getButton());
+		DISPATCH_LAYER_EVENT(MouseButtonPressedEvent, eventContext);
 		return false;
 	}
 
 	bool Application::onMouseButtonHeldEvent(const MouseButtonHeldEvent& eventContext) {
-		CORE_LOG_TRACE("Mouse button {0} is held", eventContext.getButton());
+		DISPATCH_LAYER_EVENT(MouseButtonHeldEvent, eventContext);
 		return false;
 	}
 
 	bool Application::onMouseButtonReleasedEvent(const MouseButtonReleasedEvent& eventContext) {
-		CORE_LOG_TRACE("Mouse button {0} is released", eventContext.getButton());
+		DISPATCH_LAYER_EVENT(MouseButtonReleasedEvent, eventContext);
 		return false;
+	}
+	/*11.2.2_Define func call to func of stackLayer from Application*/
+	void Application::pushLayer(Layer* layer) {
+		mLayerStack->push(layer);
+		layer->onAttach();
+	}
+
+	void Application::pushOverlayLayer(Layer* layer) {
+		mLayerStack->pushOverlay(layer);
+		layer->onAttach();
+	}
+
+	void Application::popLayer(Layer* layer) {
+		mLayerStack->pop(layer);
+		layer->onDetach();
+	}
+
+	void Application::popOverlayLayer(Layer* layer) {
+		mLayerStack->popOverlay(layer);
+		layer->onDetach();
 	}
 }

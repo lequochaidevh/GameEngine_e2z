@@ -7,7 +7,7 @@
 #include"Window/Window.h"
 #include"Window/WindowPlatform.h"
 #include"Core/Event/EventDispatcher.h"
-
+#include"Core/Layer/LayerStack.h"
 /*1_Create Application*/
 namespace VIEngine {
 	/*1.1.3_Config Application*/
@@ -30,7 +30,10 @@ namespace VIEngine {
 		bool Init();//Application
 		void Shutdown();//Application
 		
-		
+		void pushLayer(Layer*);
+		void pushOverlayLayer(Layer*);
+		void popLayer(Layer*);
+		void popOverlayLayer(Layer*);
 	protected:
 		Application() = default; /*1.1.1.2_Singleton design pattern*/
 		Application(const ApplicationConfiguration&);
@@ -50,6 +53,8 @@ namespace VIEngine {
 	private:
 		ApplicationConfiguration mConfig;
 		Unique<NativeWindow> mNativeWindow; //unique_ptr<NativeWindow>
+		Unique<LayerStack> mLayerStack;
+
 		/*8.3.3_Create mEventDispatcher is a member of Application*/
 		EventDispatcher mEventDispatcher;
 
