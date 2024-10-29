@@ -5,6 +5,7 @@
 #include <spdlog/spdlog.h>
 #include"Core/Logger/Logger.h"
 #include"Window/Window.h"
+#include"Window/WindowPlatform.h"
 #include"Core/Event/EventDispatcher.h"
 
 /*1_Create Application*/
@@ -36,11 +37,23 @@ namespace VIEngine {
 	private:
 		/*8.3.4_Create -onWindownResizedEvent(const WindowResizedEvent&) is a func of App Class*/
 		bool onWindowResizedEvent(const WindowResizedEvent&);
+
+
+		bool onKeyPressedEvent(const KeyPressedEvent&);
+		bool onKeyHeldEvent(const KeyHeldEvent&);
+		bool onKeyReleasedEvent(const KeyReleasedEvent&);
+		bool onMouseMovedEvent(const MouseMovedEvent&);
+		bool onMouseScrolledEvent(const MouseScrolledEvent&);
+		bool onMouseButtonPressedEvent(const MouseButtonPressedEvent&);
+		bool onMouseButtonHeldEvent(const MouseButtonHeldEvent&);
+		bool onMouseButtonReleasedEvent(const MouseButtonReleasedEvent&);
 	private:
 		ApplicationConfiguration mConfig;
 		Unique<NativeWindow> mNativeWindow; //unique_ptr<NativeWindow>
 		/*8.3.3_Create mEventDispatcher is a member of Application*/
 		EventDispatcher mEventDispatcher;
+
+		class InputState* mInputState;
 	};
 	/*1.1.2_Application will be managed by Engine*/
 	extern Application* CreateApplication(); /*using extern key because function will defined in other project*/
