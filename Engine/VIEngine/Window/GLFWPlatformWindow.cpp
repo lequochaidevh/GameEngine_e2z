@@ -129,4 +129,8 @@ namespace VIEngine {
 	InputState* GLFWPlatformWindow::getInputState() {
 		return &mData.input;
 	}
+	float GLFWPlatformWindow::getTimeSeconds()
+	{
+		return glfwGetTime();
+	}
 }

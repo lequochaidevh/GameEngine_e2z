@@ -1,13 +1,14 @@
 #pragma once
 
-#include<glad/gl.h>
-#include<iostream>
+#include <glad/gl.h>
+#include <iostream>
 #include <spdlog/spdlog.h>
-#include"Core/Logger/Logger.h"
-#include"Window/Window.h"
-#include"Window/WindowPlatform.h"
-#include"Core/Event/EventDispatcher.h"
-#include"Core/Layer/LayerStack.h"
+#include "Core/Logger/Logger.h"
+#include "Window/Window.h"
+#include "Window/WindowPlatform.h"
+#include "Core/Event/EventDispatcher.h"
+#include "Core/Layer/LayerStack.h"
+#include "Core/Time/Time.h"
 /*1_Create Application*/
 namespace VIEngine {
 	/*1.1.3_Config Application*/
@@ -16,6 +17,7 @@ namespace VIEngine {
 		int Width, Height;
 		const char* Title;
 		EWindowPlatformSpec WindowSpec; //EWindowPlatformSpec
+		uint16_t MaxFPS;
 	};
 	/*1.1.1 Application*/
 	class VI_API  Application {
@@ -59,6 +61,9 @@ namespace VIEngine {
 		EventDispatcher mEventDispatcher;
 
 		class InputState* mInputState;
+
+		Time mTime;
+		bool mIsRunning;
 	};
 	/*1.1.2_Application will be managed by Engine*/
 	extern Application* CreateApplication(); /*using extern key because function will defined in other project*/

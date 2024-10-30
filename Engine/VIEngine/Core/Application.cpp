@@ -13,7 +13,9 @@
 
 namespace VIEngine {
 	
-    Application::Application(const ApplicationConfiguration& config) : mConfig(config) , mEventDispatcher() {
+	Application::Application(const ApplicationConfiguration& config) : mConfig(config), mEventDispatcher(),
+		mIsRunning(true), mInputState(nullptr), mTime()
+	{
 		mNativeWindow.reset(WindowPlatform::Create(config.WindowSpec)); //reset unique_ptr
 		/*11.1.7_Add and Allocate Heap mLayerStack*/
 		mLayerStack.reset(new LayerStack()); 
@@ -44,22 +46,41 @@ namespace VIEngine {
 		CORE_LOG_INFO("App is running: ({0}, {1}, {2})", mConfig.Width, mConfig.Height, mConfig.Title);
 		OnInitClient();
 		/*11.1.9_Browse LayerStack class, this have vector*/
-		while (!mNativeWindow->ShouldClose()) {
-			mNativeWindow->Swapbuffers();
-			/**/
-			for (auto layer : *mLayerStack.get()) {
-				layer->onProcessInput(*mInputState);
-			}
 
-			for (auto layer : *mLayerStack.get()) {
-				layer->onUpdate(0.0f);
-			}
+		const float MAX_DELTA_TIME = 0.05f;
+		float minDeltaTime = 1.0f / mConfig.MaxFPS;
+		while (mIsRunning && !mNativeWindow->ShouldClose()) {
+			static float lastFrameTime = 0.0f;
+
+			while (mNativeWindow->getTimeSeconds() - lastFrameTime < minDeltaTime) {} //holding time
+
+			float currentFrameTime = mNativeWindow->getTimeSeconds();
+			mTime = currentFrameTime - lastFrameTime;
+			lastFrameTime = currentFrameTime;
 
 			mNativeWindow->PollsEvent();
+
 			for (auto layer : *mLayerStack.get()) {
 				layer->onRender();
 			}
 
+			mNativeWindow->Swapbuffers();
+			while (mTime.getDeltaTime() > MAX_DELTA_TIME) {
+				for (auto layer : *mLayerStack.get()) { //unique_ptr
+					layer->onUpdate(mTime); //MAX_DELTA_TIME
+				}
+				for (auto layer : *mLayerStack.get()) {
+					layer->onRender();
+				}
+				mTime -= MAX_DELTA_TIME;
+			}
+
+			for (auto layer : *mLayerStack.get()) { //unique_ptr
+				layer->onUpdate(mTime);
+			}
+			for (auto layer : *mLayerStack.get()) {
+				layer->onRender();
+			}
 		}
 
 		OnShutdownClient();
@@ -87,6 +108,10 @@ namespace VIEngine {
 	}
 
 	bool Application::onKeyReleasedEvent(const KeyReleasedEvent& eventContext) {
+		if (eventContext.isKey(VIEngine::EKeyCode::ESCAPE)) {
+			LOG_TRACE("ESC key is released");
+			mIsRunning = false;
+		}
 		DISPATCH_LAYER_EVENT(KeyReleasedEvent, eventContext);
 		return false;
 	}

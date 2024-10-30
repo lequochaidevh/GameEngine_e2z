@@ -1,7 +1,7 @@
 #pragma once
 #include"pch.h"
 #include"Core/Event/EventContext.h"
-
+#include "Core/Time/Time.h"
 /*11.1.1_Create LayerClass*/
 namespace VIEngine {
 	class VI_API Layer {
@@ -13,7 +13,7 @@ namespace VIEngine {
 		virtual void onAttach() {}
 		virtual void onDetach() {}
 		virtual void onProcessInput(const struct InputState&) {}
-		virtual void onUpdate(float deltaTime) {}
+		virtual void onUpdate(Time time) {}
 		virtual void onRender() {}
 
 		/*11.1.2_Reference Application ;Action: Event > Application > Layer*/

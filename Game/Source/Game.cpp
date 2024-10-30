@@ -15,17 +15,17 @@ public:
 		LOG_INFO("Game is init > Game.cpp");
 
 		mLayer = new GameplayLayer();
-		mUI = new UILayer();
-		pushOverlayLayer(mUI); // >App
+		//mUI = new UILayer();
+		//pushOverlayLayer(mUI); // >App
 		pushLayer(mLayer);
 	}
 	virtual void OnShutdownClient() override {
 		LOG_INFO("Game is shutdown >> Game.cpp ");
 		popLayer(mLayer);
-		popOverlayLayer(mUI);
+		//popOverlayLayer(mUI);
 	}
 private:
-	VIEngine::Layer* mLayer, * mUI;
+	VIEngine::Layer* mLayer;// , * mUI;
 };
 VIEngine::Application* VIEngine::CreateApplication() {
 	/*2.2_Client init config for Application*/
@@ -34,5 +34,6 @@ VIEngine::Application* VIEngine::CreateApplication() {
 	appConfig.Height = 600;
 	appConfig.Title = "VIEngine Alpha ver";
 	appConfig.WindowSpec = VIEngine::EWindowPlatformSpec::GLFW;
+	appConfig.MaxFPS = 60;
 	return new Game(appConfig);
 }

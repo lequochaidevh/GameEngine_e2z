@@ -167,6 +167,24 @@ build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Logger\Logger.cpp.obj: CXX_CO
   TARGET_COMPILE_PDB = Engine\CMakeFiles\VIEngine.dir\VIEngine.pdb
   TARGET_PDB = Engine\VIEngine.pdb
 
+build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\LinearAllocator.cpp.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241028_KeysCode\Engine\VIEngine\Core\Memory\LinearAllocator.cpp | Engine\CMakeFiles\VIEngine.dir\cmake_pch.hxx Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_VIEngine
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0 -DON_VI_ENGINE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241028_KeysCode\Engine\VIEngine -ID:\241002_LearningPrograming\241028_KeysCode\Vendors\include -ID:\241002_LearningPrograming\241028_KeysCode\Vendors\glfw\include
+  OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir
+  OBJECT_FILE_DIR = Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory
+  TARGET_COMPILE_PDB = Engine\CMakeFiles\VIEngine.dir\VIEngine.pdb
+  TARGET_PDB = Engine\VIEngine.pdb
+
+build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\MemoryAllocator.cpp.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241028_KeysCode\Engine\VIEngine\Core\Memory\MemoryAllocator.cpp | Engine\CMakeFiles\VIEngine.dir\cmake_pch.hxx Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_VIEngine
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0 -DON_VI_ENGINE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241028_KeysCode\Engine\VIEngine -ID:\241002_LearningPrograming\241028_KeysCode\Vendors\include -ID:\241002_LearningPrograming\241028_KeysCode\Vendors\glfw\include
+  OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir
+  OBJECT_FILE_DIR = Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory
+  TARGET_COMPILE_PDB = Engine\CMakeFiles\VIEngine.dir\VIEngine.pdb
+  TARGET_PDB = Engine\VIEngine.pdb
+
 build Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\GLFWPlatformWindow.cpp.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241028_KeysCode\Engine\VIEngine\Window\GLFWPlatformWindow.cpp | Engine\CMakeFiles\VIEngine.dir\cmake_pch.hxx Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_VIEngine
   DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0 -DON_VI_ENGINE
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx
@@ -202,7 +220,7 @@ build Engine\CMakeFiles\VIEngine.dir\VIEngine\pch.cpp.obj: CXX_COMPILER__VIEngin
 #############################################
 # Link the static library Engine\VIEngine.lib
 
-build Engine\VIEngine.lib: CXX_STATIC_LIBRARY_LINKER__VIEngine_Debug Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Event\EventDispatcher.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Input\GLFWInput.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Layer\LayerStack.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Logger\Logger.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\GLFWPlatformWindow.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\WindowPlatform.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\pch.cpp.obj || Vendors\glfw\src\glfw3.lib
+build Engine\VIEngine.lib: CXX_STATIC_LIBRARY_LINKER__VIEngine_Debug Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Event\EventDispatcher.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Input\GLFWInput.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Layer\LayerStack.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Logger\Logger.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\LinearAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\MemoryAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\GLFWPlatformWindow.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\WindowPlatform.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\pch.cpp.obj || Vendors\glfw\src\glfw3.lib
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir

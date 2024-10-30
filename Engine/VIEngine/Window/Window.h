@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core/Input/InputState.h"
+#include "Core/Time/Time.h"
 /*6.2_Config lib-using 	(GLFWPlatform)Library (define override implement function)
 						<-Window (enum,class interface NativeWindow [action implement,#(),#~()];(GLFWPlatform:NativeWindow) )
 						<-WindowPlatform (NativeWindow* Create()->new GLFWPlatform(),-(),-~())
@@ -46,6 +47,8 @@ namespace VIEngine {
 		/*9.1.2.3_InputState* GetInputState() */
 		virtual InputState* getInputState() = 0;
 		
+		/*12.1.2_Add define getTimeSeconds*/
+		virtual float getTimeSeconds() = 0;
 	private:
 
 	protected:
@@ -64,6 +67,8 @@ namespace VIEngine {
 		virtual bool ShouldClose() override;
 
 		virtual InputState* getInputState() override;
+
+		virtual float getTimeSeconds() override;
 
 	private:
 		GLFWwindow* mWindow;
