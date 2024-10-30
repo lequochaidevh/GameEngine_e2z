@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "D:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Vendors/glfw/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"D:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Vendors/glfw/install_manifest.txt\"")
+if (NOT EXISTS "D:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Vendors/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"D:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Vendors/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "D:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Vendors/glfw/install_manifest.txt" files)
+file(READ "D:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Vendors/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

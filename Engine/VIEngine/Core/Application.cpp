@@ -67,7 +67,7 @@ namespace VIEngine {
 			mNativeWindow->Swapbuffers();
 			while (mTime.getDeltaTime() > MAX_DELTA_TIME) {
 				for (auto layer : *mLayerStack.get()) { //unique_ptr
-					layer->onUpdate(mTime); //MAX_DELTA_TIME
+					layer->onUpdate(MAX_DELTA_TIME); //MAX_DELTA_TIME
 				}
 				for (auto layer : *mLayerStack.get()) {
 					layer->onRender();

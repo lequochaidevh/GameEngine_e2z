@@ -1,7 +1,7 @@
-prefix=D:/241002_LearningPrograming/241028_KeysCode/out/install/x64-debug
+prefix=D:/241002_LearningPrograming/241030_TimeFPS/out/install/x64-debug
 exec_prefix=${prefix}
-includedir=D:/241002_LearningPrograming/241028_KeysCode/out/install/x64-debug/include
-libdir=D:/241002_LearningPrograming/241028_KeysCode/out/install/x64-debug/lib
+includedir=D:/241002_LearningPrograming/241030_TimeFPS/out/install/x64-debug/include
+libdir=D:/241002_LearningPrograming/241030_TimeFPS/out/install/x64-debug/lib
 
 Name: GLFW
 Description: A multi-platform library for OpenGL, window and input
