@@ -1,8 +1,8 @@
-# Install script for directory: D:/241002_LearningPrograming/241028_KeysCode/Vendors/glfw/src
+# Install script for directory: D:/241002_LearningPrograming/241030_TimeFPS/Vendors/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/241002_LearningPrograming/241028_KeysCode/out/install/x64-debug")
+  set(CMAKE_INSTALL_PREFIX "D:/241002_LearningPrograming/241030_TimeFPS/out/install/x64-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,6 +33,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/241002_LearningPrograming/241028_KeysCode/out/build/x64-debug/Vendors/glfw/src/glfw3.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Vendors/glfw/src/glfw3.lib")
 endif()
 
