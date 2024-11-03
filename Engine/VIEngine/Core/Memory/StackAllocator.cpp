@@ -10,7 +10,7 @@ namespace VIEngine {
 
 	}
 
-	void* StackAllocator::memAllocate(size_t memorySize, uint8_t alignment) {
+	void* StackAllocator::allocate(size_t memorySize, uint8_t alignment) {
 		VI_ASSERT(memorySize > INVALID_MEMORY_SIZE && "Allocate invalid memory size");
 		VI_ASSERT(alignment < MAX_ALLOWED_ALIGNMENT && "Invalid alignment");
 
@@ -42,7 +42,7 @@ namespace VIEngine {
 		return asVoidPtrAddress;
 	}
 
-	void StackAllocator::memFree(void* memory) {
+	void StackAllocator::free(void* memory) {
 		union {
 			void* asVoidPtrAddress;
 			uintptr_t asUintPtrAddress;
@@ -59,7 +59,7 @@ namespace VIEngine {
 		mAllocationCount--;
 	}
 
-	void StackAllocator::memClear() {
+	void StackAllocator::clear() {
 		mUsedMemory = 0;
 		mAllocationCount = 0;
 	}

@@ -15,7 +15,7 @@ namespace VIEngine {
 		VI_ASSERT(mChunkSize >= sizeof(FreeNode) && "Invalid chunk size");
 		VI_ASSERT(mMemorySize >= mChunkSize && "Invalid memory size");
 		mFreeListHead = nullptr;
-		this->memClear();
+		this->clear();
 	}
 	PoolAllocator::~PoolAllocator() {
 	}
@@ -27,7 +27,7 @@ namespace VIEngine {
 		mAllocationCount++;
 		return node;
 	}
-	void PoolAllocator::memFree(void* memory) {
+	void PoolAllocator::free(void* memory) {
 		VI_ASSERT(memory != nullptr && "Free invalid memory address");
 		uintptr_t numberOfChunks = mMemorySize / mChunkSize;
 		union {
@@ -43,7 +43,7 @@ namespace VIEngine {
 		mUsedMemory -= mChunkSize;
 		mAllocationCount--;
 	}
-	void PoolAllocator::memClear() {
+	void PoolAllocator::clear() {
 		size_t numberOfChunks = mMemorySize / mChunkSize;
 		union {
 			void* asVoidPtrAddress;

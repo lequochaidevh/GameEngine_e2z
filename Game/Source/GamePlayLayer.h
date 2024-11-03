@@ -7,7 +7,7 @@
 #include "Core/Memory/MemoryAllocator.h"
 #include<chrono>
 
-#define POOL_MEMORY_ALLOCATOR
+#define STACK_MEMORY_ALLOCATOR
 
 #ifndef POOL_MEMORY_ALLOCATOR
 	#ifndef STACK_MEMORY_ALLOCATOR
@@ -15,8 +15,8 @@
 	#endif
 #endif // POOL_ALLOCATOR
 
-void testCaseMemoryAllocator(VIEngine::MemoryAllocator* mAllocator);
-void testCaseMemoryPoolAllocator(VIEngine::PoolAllocator* mAllocator);
+//void testCaseMemoryAllocator(VIEngine::MemoryAllocator* mAllocator);
+//void testCaseMemoryPoolAllocator(VIEngine::PoolAllocator* mAllocator);
 void testPerformanceMemoryAllocator();
 
 class GameplayLayer : public VIEngine::Layer {
@@ -26,11 +26,11 @@ public:
 	virtual void onAttach() override {
 		LOG_TRACE("GameplayLayer is attached");
 		testPerformanceMemoryAllocator();
-		//#ifdef POOL_MEMORY_ALLOCATOR
-		//	testCaseMemoryPoolAllocator(mAllocator);
-		//#elif defined(LINEAR_MEMORY_ALLOCATOR) || defined(STACK_MEMORY_ALLOCATOR)
-		//	testCaseMemoryAllocator(mAllocator);
-		//#endif // POOL_ALLOCATOR
+		/*#ifdef POOL_MEMORY_ALLOCATOR
+			testCaseMemoryPoolAllocator(mAllocator);
+		#elif defined(LINEAR_MEMORY_ALLOCATOR) || defined(STACK_MEMORY_ALLOCATOR)
+			testCaseMemoryAllocator(mAllocator);
+		#endif*/
 		
 	}
 	virtual void onDetach() override {
@@ -63,16 +63,14 @@ void testCaseMemoryAllocator(VIEngine::MemoryAllocator* mAllocator) {
 #elif defined(STACK_MEMORY_ALLOCATOR)
 	mAllocator = new VIEngine::StackAllocator(size, address);
 #endif // LINEAR_MEMORY_ALLOCATOR 
-
 	struct GameObject {
 		size_t ID = 0;
 		std::string Name = "GameObject";
 	};
-
 	std::vector<GameObject*> gameObjects;
 
 	for (int i = 0; i < 10; i++) {
-		void* memory = mAllocator->memAllocate(sizeof(GameObject), alignof(GameObject));
+		void* memory = mAllocator->allocate(sizeof(GameObject), alignof(GameObject));
 		GameObject* go = new (memory)GameObject();
 		go->ID = i;
 		go->Name = "GameObject: " + std::to_string(i);
@@ -80,24 +78,24 @@ void testCaseMemoryAllocator(VIEngine::MemoryAllocator* mAllocator) {
 	}
 
 	#ifdef LINEAR_MEMORY_ALLOCATOR 
-		mAllocator->memClear();
+		mAllocator->clear();
 	#elif defined(STACK_MEMORY_ALLOCATOR)
 		/*Clear Memory 1 stack*/
 		for (auto iter = gameObjects.rbegin(); iter != gameObjects.rend(); ++iter) {
-			mAllocator->memFree(*iter);
+			mAllocator->free(*iter);
 		}
 	#endif 
 	
 	gameObjects.clear();
 
 	for (int i = 0; i < 10; i++) {
-		void* memory = mAllocator->memAllocate(sizeof(GameObject), alignof(GameObject));
+		void* memory = mAllocator->allocate(sizeof(GameObject), alignof(GameObject));
 		GameObject* go = new (memory)GameObject();
 		go->ID = i + 10;
 		go->Name = "GameObject: " + std::to_string(i);
 		gameObjects.emplace_back(go);
 	}
-	mAllocator->memClear();
+	mAllocator->clear();
 	gameObjects.clear();
 }
 
@@ -123,8 +121,8 @@ void testCaseMemoryPoolAllocator(VIEngine::PoolAllocator* mAllocator) {
 		gameObjects.emplace_back(go);
 	}
 
-	mAllocator->memFree(gameObjects[1]);
-	mAllocator->memFree(gameObjects[2]);
+	mAllocator->free(gameObjects[1]);
+	mAllocator->free(gameObjects[2]);
 
 	void* memory = mAllocator->allocateChunk();
 	GameObject* go = new (memory)GameObject();
@@ -138,7 +136,7 @@ void testCaseMemoryPoolAllocator(VIEngine::PoolAllocator* mAllocator) {
 	go->Name = "GameObject: " + std::to_string(12);
 	gameObjects.emplace_back(go);
 
-	mAllocator->memClear();
+	mAllocator->clear();
 	gameObjects.clear();
 
 	for (int i = 0; i < 10; i++) {
@@ -149,7 +147,7 @@ void testCaseMemoryPoolAllocator(VIEngine::PoolAllocator* mAllocator) {
 		gameObjects.emplace_back(go);
 	}
 
-	mAllocator->memClear();
+	mAllocator->clear();
 	gameObjects.clear();
 }
 
@@ -205,23 +203,23 @@ void testPerformanceMemoryAllocator() {
 	startTime = std::chrono::high_resolution_clock::now();
 
 	for (int i = 0; i < numOfObjects; i++) {
-		void* memory = mLinearAllocator->memAllocate(sizeof(GameObject), alignof(GameObject));
+		void* memory = mLinearAllocator->allocate(sizeof(GameObject), alignof(GameObject));
 		GameObject* go = new (memory)GameObject();
 		go->ID = i;
 		objects.emplace_back(go);
 	}
 
-	mLinearAllocator->memClear();
+	mLinearAllocator->clear();
 	objects.clear();
 
 	for (int i = 0; i < numOfObjects; i++) {
-		void* memory = mLinearAllocator->memAllocate(sizeof(GameObject), alignof(GameObject));
+		void* memory = mLinearAllocator->allocate(sizeof(GameObject), alignof(GameObject));
 		GameObject* go = new (memory)GameObject();
 		go->ID = i;
 		objects.emplace_back(go);
 	}
 
-	mLinearAllocator->memClear();
+	mLinearAllocator->clear();
 	objects.clear();
 
 	endTime = std::chrono::high_resolution_clock::now();
@@ -231,23 +229,23 @@ void testPerformanceMemoryAllocator() {
 	// STACK ALLOCATOR
 	startTime = std::chrono::high_resolution_clock::now();
 	for (int i = 0; i < numOfObjects; i++) {
-		void* memory = mStackAllocator->memAllocate(sizeof(GameObject), alignof(GameObject));
+		void* memory = mStackAllocator->allocate(sizeof(GameObject), alignof(GameObject));
 		GameObject* go = new (memory)GameObject();
 		go->ID = i;
 		objects.emplace_back(go);
 	}
 
-	mStackAllocator->memClear();
+	mStackAllocator->clear();
 	objects.clear();
 
 	for (int i = 0; i < numOfObjects; i++) {
-		void* memory = mStackAllocator->memAllocate(sizeof(GameObject), alignof(GameObject));
+		void* memory = mStackAllocator->allocate(sizeof(GameObject), alignof(GameObject));
 		GameObject* go = new (memory)GameObject();
 		go->ID = i;
 		objects.emplace_back(go);
 	}
 
-	mStackAllocator->memClear();
+	mStackAllocator->clear();
 	objects.clear();
 
 	endTime = std::chrono::high_resolution_clock::now();
@@ -263,7 +261,7 @@ void testPerformanceMemoryAllocator() {
 		objects.emplace_back(go);
 	}
 
-	mPoolAllocator->memClear();
+	mPoolAllocator->clear();
 	objects.clear();
 
 	for (int i = 0; i < numOfObjects; i++) {
@@ -273,7 +271,7 @@ void testPerformanceMemoryAllocator() {
 		objects.emplace_back(go);
 	}
 
-	mPoolAllocator->memClear();
+	mPoolAllocator->clear();
 	objects.clear();
 
 	endTime = std::chrono::high_resolution_clock::now();
