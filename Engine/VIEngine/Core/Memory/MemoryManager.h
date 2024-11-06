@@ -29,12 +29,12 @@ namespace VIEngine {
 		// Allocate temporary memory that will be automatically freed at the end of a frame
 		template<typename T, typename... Args>
 		T* newPerFrame(Args&&... args) {
-			void* address = mPerFrameAllocator.memAllocate(sizeof(T), alignof(T));
+			void* address = mPerFrameAllocator.allocate(sizeof(T), alignof(T));
 			return new (address)T(std::forward<Args>(args)...);
 		}
 		template<typename T, typename... Args>
-		T* ewOnStack(const char* usage, Args&&... args) {
-			void* address = memAllocateOnStack(usage, sizeof(T), alignof(T));
+		T* newOnStack(const char* usage, Args&&... args) {
+			void* address = allocateOnStack(usage, sizeof(T), alignof(T));
 				return new (address)T(std::forward<Args>(args)...);
 		}
 	private:
