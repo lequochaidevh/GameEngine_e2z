@@ -212,6 +212,15 @@ build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\StackAllocator.cpp.obj
   TARGET_COMPILE_PDB = Engine\CMakeFiles\VIEngine.dir\VIEngine.pdb
   TARGET_PDB = Engine\VIEngine.pdb
 
+build Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Type\RTTI.cpp.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241030_TimeFPS\Engine\VIEngine\Core\Type\RTTI.cpp | Engine\CMakeFiles\VIEngine.dir\cmake_pch.hxx Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_VIEngine
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0 -DON_VI_ENGINE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241030_TimeFPS\Engine\VIEngine -ID:\241002_LearningPrograming\241030_TimeFPS\Vendors\include -ID:\241002_LearningPrograming\241030_TimeFPS\Vendors\glfw\include
+  OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir
+  OBJECT_FILE_DIR = Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Type
+  TARGET_COMPILE_PDB = Engine\CMakeFiles\VIEngine.dir\VIEngine.pdb
+  TARGET_PDB = Engine\VIEngine.pdb
+
 build Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\GLFWPlatformWindow.cpp.obj: CXX_COMPILER__VIEngine_unscanned_Debug D$:\241002_LearningPrograming\241030_TimeFPS\Engine\VIEngine\Window\GLFWPlatformWindow.cpp | Engine\CMakeFiles\VIEngine.dir\cmake_pch.hxx Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_VIEngine
   DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0 -DON_VI_ENGINE
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Engine/CMakeFiles/VIEngine.dir/cmake_pch.hxx
@@ -247,7 +256,7 @@ build Engine\CMakeFiles\VIEngine.dir\VIEngine\pch.cpp.obj: CXX_COMPILER__VIEngin
 #############################################
 # Link the static library Engine\VIEngine.lib
 
-build Engine\VIEngine.lib: CXX_STATIC_LIBRARY_LINKER__VIEngine_Debug Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Event\EventDispatcher.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Input\GLFWInput.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Layer\LayerStack.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Logger\Logger.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\LinearAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\MemoryAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\MemoryManager.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\PoolAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\StackAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\GLFWPlatformWindow.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\WindowPlatform.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\pch.cpp.obj || Vendors\glfw\src\glfw3.lib
+build Engine\VIEngine.lib: CXX_STATIC_LIBRARY_LINKER__VIEngine_Debug Engine\CMakeFiles\VIEngine.dir\cmake_pch.cxx.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Application.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Event\EventDispatcher.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Input\GLFWInput.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Layer\LayerStack.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Logger\Logger.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\LinearAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\MemoryAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\MemoryManager.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\PoolAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Memory\StackAllocator.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Core\Type\RTTI.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\GLFWPlatformWindow.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\Window\WindowPlatform.cpp.obj Engine\CMakeFiles\VIEngine.dir\VIEngine\pch.cpp.obj || Vendors\glfw\src\glfw3.lib
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = Engine\CMakeFiles\VIEngine.dir
@@ -326,7 +335,7 @@ build cmake_object_order_depends_target_Game: phony || cmake_object_order_depend
 
 build Game\CMakeFiles\Game.dir\cmake_pch.cxx.obj: CXX_COMPILER__Game_unscanned_Debug D$:\241002_LearningPrograming\241030_TimeFPS\out\build\x64-debug\Game\CMakeFiles\Game.dir\cmake_pch.cxx | Game\CMakeFiles\Game.dir\cmake_pch.hxx || cmake_object_order_depends_target_Game
   DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0 -DON_VI_ENGINE
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YcD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /GR- /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YcD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx
   INCLUDES = -ID:\241002_LearningPrograming\241030_TimeFPS\Engine -ID:\241002_LearningPrograming\241030_TimeFPS\Engine\VIEngine -ID:\241002_LearningPrograming\241030_TimeFPS\Vendors\include -ID:\241002_LearningPrograming\241030_TimeFPS\Vendors\glfw\include
   OBJECT_DIR = Game\CMakeFiles\Game.dir
   OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir
@@ -341,7 +350,16 @@ build Game\CMakeFiles\Game.dir\.\cmake_pch.cxx.pch: phony Game\CMakeFiles\Game.d
 
 build Game\CMakeFiles\Game.dir\Source\Game.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:\241002_LearningPrograming\241030_TimeFPS\Game\Source\Game.cpp | Game\CMakeFiles\Game.dir\cmake_pch.hxx Game\CMakeFiles\Game.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_Game
   DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0 -DON_VI_ENGINE
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /GR- /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx
+  INCLUDES = -ID:\241002_LearningPrograming\241030_TimeFPS\Engine -ID:\241002_LearningPrograming\241030_TimeFPS\Engine\VIEngine -ID:\241002_LearningPrograming\241030_TimeFPS\Vendors\include -ID:\241002_LearningPrograming\241030_TimeFPS\Vendors\glfw\include
+  OBJECT_DIR = Game\CMakeFiles\Game.dir
+  OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\Source
+  TARGET_COMPILE_PDB = Game\CMakeFiles\Game.dir\
+  TARGET_PDB = Game\Game.pdb
+
+build Game\CMakeFiles\Game.dir\Source\GamePlayLayer.cpp.obj: CXX_COMPILER__Game_unscanned_Debug D$:\241002_LearningPrograming\241030_TimeFPS\Game\Source\GamePlayLayer.cpp | Game\CMakeFiles\Game.dir\cmake_pch.hxx Game\CMakeFiles\Game.dir\cmake_pch.cxx.pch || cmake_object_order_depends_target_Game
+  DEFINES = -DDYNAMIC_BUILD=0 -DDYNAMIC_LIB=0 -DON_VI_ENGINE
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /GR- /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI /YuD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx
   INCLUDES = -ID:\241002_LearningPrograming\241030_TimeFPS\Engine -ID:\241002_LearningPrograming\241030_TimeFPS\Engine\VIEngine -ID:\241002_LearningPrograming\241030_TimeFPS\Vendors\include -ID:\241002_LearningPrograming\241030_TimeFPS\Vendors\glfw\include
   OBJECT_DIR = Game\CMakeFiles\Game.dir
   OBJECT_FILE_DIR = Game\CMakeFiles\Game.dir\Source
@@ -356,8 +374,8 @@ build Game\CMakeFiles\Game.dir\Source\Game.cpp.obj: CXX_COMPILER__Game_unscanned
 #############################################
 # Link the executable Game\Game.exe
 
-build Game\Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug Game\CMakeFiles\Game.dir\cmake_pch.cxx.obj Game\CMakeFiles\Game.dir\Source\Game.cpp.obj | Engine\VIEngine.lib Vendors\glfw\src\glfw3.lib || Engine\VIEngine.lib Vendors\glfw\src\glfw3.lib
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
+build Game\Game.exe: CXX_EXECUTABLE_LINKER__Game_Debug Game\CMakeFiles\Game.dir\cmake_pch.cxx.obj Game\CMakeFiles\Game.dir\Source\Game.cpp.obj Game\CMakeFiles\Game.dir\Source\GamePlayLayer.cpp.obj | Engine\VIEngine.lib Vendors\glfw\src\glfw3.lib || Engine\VIEngine.lib Vendors\glfw\src\glfw3.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /GR- /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = Engine\VIEngine.lib  spdlogd.lib  Vendors\glfw\src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   LINK_PATH = -LIBPATH:D:\241002_LearningPrograming\241030_TimeFPS\Vendors\bin

@@ -1,0 +1,305 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Game/Game.exe"
+		},
+		{
+			"path" : "Game/Game.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"Game/CMakeLists.txt",
+			"Engine/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 28,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /GR- /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI"
+				},
+				{
+					"fragment" : "/YcD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "DYNAMIC_BUILD=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "DYNAMIC_LIB=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "ON_VI_ENGINE"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "D:/241002_LearningPrograming/241030_TimeFPS/Engine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241030_TimeFPS/Engine/VIEngine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241030_TimeFPS/Vendors/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241030_TimeFPS/Vendors/glfw/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"precompileHeaders" : 
+			[
+				{
+					"backtrace" : 2,
+					"header" : "D:/241002_LearningPrograming/241030_TimeFPS/Engine/VIEngine/pch.h"
+				},
+				{
+					"backtrace" : 2,
+					"header" : "D:/241002_LearningPrograming/241030_TimeFPS/Vendors/include/glad/gl.h"
+				}
+			],
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /GR- /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI"
+				},
+				{
+					"fragment" : "/YuD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241030_TimeFPS/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "DYNAMIC_BUILD=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "DYNAMIC_LIB=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "ON_VI_ENGINE"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "D:/241002_LearningPrograming/241030_TimeFPS/Engine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241030_TimeFPS/Engine/VIEngine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241030_TimeFPS/Vendors/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241030_TimeFPS/Vendors/glfw/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"precompileHeaders" : 
+			[
+				{
+					"backtrace" : 2,
+					"header" : "D:/241002_LearningPrograming/241030_TimeFPS/Engine/VIEngine/pch.h"
+				},
+				{
+					"backtrace" : 2,
+					"header" : "D:/241002_LearningPrograming/241030_TimeFPS/Vendors/include/glad/gl.h"
+				}
+			],
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "VIEngine::@8f69bdd092c897d92c1e"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "glfw::@3b1c799898a8435bb2a9"
+		}
+	],
+	"id" : "Game::@971b28586fb25e7ff763",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /GR- /MDd /Ob0 /Od /RTC1 -ZI",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-LIBPATH:D:\\241002_LearningPrograming\\241030_TimeFPS\\Vendors\\bin",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "Engine\\VIEngine.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "spdlogd.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "Vendors\\glfw\\src\\glfw3.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Game",
+	"nameOnDisk" : "Game.exe",
+	"paths" : 
+	{
+		"build" : "Game",
+		"source" : "Game"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		},
+		{
+			"name" : "Precompile Header File",
+			"sourceIndexes" : 
+			[
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Game/Source/Game.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Game/Source/GamePlayLayer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"path" : "out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

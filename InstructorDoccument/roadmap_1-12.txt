@@ -154,3 +154,4 @@
 <13.1.1 Increase Memory Allocation performance when calling the NEW method so that the system allocates memory side by side>
 
 
+<#III>#17_1.Turn Off RTTI of Compiler C++
