@@ -33,7 +33,7 @@ namespace VIEngine {
 			return new (address)T(std::forward<Args>(args)...);
 		}
 		template<typename T, typename... Args>
-		T* ewOnStack(const char* usage, Args&&... args) {
+		T* newOnStack(const char* usage, Args&&... args) {
 			void* address = memAllocateOnStack(usage, sizeof(T), alignof(T));
 				return new (address)T(std::forward<Args>(args)...);
 		}
