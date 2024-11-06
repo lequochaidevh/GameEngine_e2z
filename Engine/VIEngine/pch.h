@@ -76,3 +76,18 @@ template<typename T> using Unique = std::unique_ptr<T>;
 /*8.3.5.1_Create Lambda: return auto*/
 #define BIND_EVENT_FUNCTION(function) [this](auto&... args) -> decltype(auto)\
 	{return this->function(std::forward<decltype(args)>(args)...);}
+
+/*10_Setup UUID*/
+#define INVALID_ID 0
+
+namespace VIEngine {
+	using UUID = size_t;
+
+	UUID VI_API getUUID();
+
+	template<typename T>
+	UUID VI_API getTypeUUID() {
+		static UUID uuid = getUUID();
+		return uuid;
+	}
+}

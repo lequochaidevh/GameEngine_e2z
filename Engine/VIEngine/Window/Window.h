@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Core/Input/InputState.h"
+#include "Core/Time/Time.h"
 /*6.2_Config lib-using 	(GLFWPlatform)Library (define override implement function)
 						<-Window (enum,class interface NativeWindow [action implement,#(),#~()];(GLFWPlatform:NativeWindow) )
 						<-WindowPlatform (NativeWindow* Create()->new GLFWPlatform(),-(),-~())
@@ -16,24 +18,37 @@ namespace VIEngine {
 		SDL,
 		None
 	};
+
+
 	/*8.3.6_Create EventDispatcher at Window*/
 	class EventDispatcher;
+
+	struct ApplicationConfiguration;
+
 	struct WindowData
 	{
 		int32_t width, height;
 		EventDispatcher* dispatcher;
+
+		/*9.1.1.7_Define InputState*/
+		InputState input;
+
 	};
 	/*8.3.6.1_Add EventDispatcher* at InitWindow */
 	class NativeWindow
 	{
 	public:
 		virtual ~NativeWindow() = default;
-		virtual bool Init(const struct ApplicationConfiguration&, EventDispatcher*) = 0;
+		virtual bool Init(const ApplicationConfiguration&, EventDispatcher*) = 0;
 		virtual void Shutdown() = 0;
 		virtual void Swapbuffers() = 0;
 		virtual void PollsEvent() = 0;
 		virtual bool ShouldClose() = 0;
+		/*9.1.2.3_InputState* GetInputState() */
+		virtual InputState* getInputState() = 0;
 		
+		/*12.1.2_Add define getTimeSeconds*/
+		virtual float getTimeSeconds() = 0;
 	private:
 
 	protected:
@@ -43,14 +58,18 @@ namespace VIEngine {
 	class GLFWPlatformWindow : public NativeWindow
 	{
 	public:
-		virtual bool Init(const struct ApplicationConfiguration&, EventDispatcher*) override;
+		GLFWPlatformWindow();
+		~GLFWPlatformWindow();
+		virtual bool Init(const ApplicationConfiguration&, EventDispatcher*) override;
 		virtual void Shutdown() override;
 		virtual void Swapbuffers() override;
 		virtual void PollsEvent() override;
 		virtual bool ShouldClose() override;
 
-		GLFWPlatformWindow();
-		~GLFWPlatformWindow();
+		virtual InputState* getInputState() override;
+
+		virtual float getTimeSeconds() override;
+
 	private:
 		GLFWwindow* mWindow;
 
