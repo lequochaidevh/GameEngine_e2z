@@ -1,0 +1,8 @@
+# ninja log v5
+9	698	7499335861930523	Game/CMakeFiles/Game.dir/cmake_pch.cxx.obj	a544485192a74fd7
+4	703	7499335861930523	Engine/CMakeFiles/VIEngine.dir/cmake_pch.cxx.obj	941b0e7b763462ee
+703	2307	7499335878044194	Engine/CMakeFiles/VIEngine.dir/VIEngine/Core/Application.cpp.obj	d35e9a820becfc4c
+699	2313	7499335878044194	Game/CMakeFiles/Game.dir/Source/Game.cpp.obj	30963023be816942
+706	3949	7499335894231332	Engine/CMakeFiles/VIEngine.dir/VIEngine/Core/Logger/Logger.cpp.obj	ae5b4d8bd9a590c
+3949	4324	7499335895091520	Engine/VIEngine.lib	46ba015a28430a41
+4324	4516	7499335899500300	Game/Game.exe	cdf8f2b9fcfdf9e7

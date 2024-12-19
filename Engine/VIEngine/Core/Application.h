@@ -1,22 +1,34 @@
+#pragma once
+
+#include<glad/gl.h>
+#include<iostream>
+#include <spdlog/spdlog.h>
+#include"Core/Logger/Logger.h"
+#include"Window/Window.h"
+
 
 namespace VIEngine {
-	struct ApplicationConfiguration {
+	struct VI_API ApplicationConfiguration {
 		int Width, Height;
 		const char* Title;
+		EWindowPlatformSpec WindowSpec;
 	};
-	class Application {
+
+	class VI_API  Application {
 	public:
 		virtual ~Application() = default;
-		virtual bool Init() { return true; }
+		bool Init();
+		virtual void OnInitClient() = 0;
 		void Run();
-		virtual void Shutdown(){}
+		virtual void OnShutdownClient() = 0;
+		void Shutdown();
 	protected:
 		Application() = default;
 		Application(const ApplicationConfiguration&);
 	private:
 		ApplicationConfiguration mConfig;
+		Unique<NativeWindow> mNativeWindow;
 	};
 
 	extern Application* CreateApplication();
-
 }
