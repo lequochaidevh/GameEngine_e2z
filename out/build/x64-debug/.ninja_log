@@ -1,5 +1,0 @@
-# ninja log v5
-3	574	7497789182166099	Engine/CMakeFiles/VIEngine.dir/VIEngine/Core/Application.cpp.obj	c467c4925fbd4fdb
-574	802	7497789184186804	Engine/VIEngine.lib	1ab78e049c96033d
-14	497	7497817742566707	Game/CMakeFiles/Game.dir/Source/Game.cpp.obj	83d859766206aad2
-498	743	7497817744273268	Game/Game.exe	d86712f1df12ad27

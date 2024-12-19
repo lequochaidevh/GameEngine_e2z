@@ -1,4 +1,5 @@
-﻿# CMakeList.txt : Top-level CMake project file, do global configuration
+﻿#I. GENERAL
+# CMakeList.txt : Top-level CMake project file, do global configuration
 # and include sub-projects here.
 #
 cmake_minimum_required (VERSION 3.8)
@@ -11,6 +12,8 @@ endif()
 
 project ("GameEngine")
 
-# Include sub-projects.
+#1_Include sub-projects. have CMakeLists.txt
 add_subdirectory ("Engine")
 add_subdirectory("Game")
+#2_Add directory for library glfw of Vendors have CMakeLists.txt 
+add_subdirectory("Vendors/glfw")
