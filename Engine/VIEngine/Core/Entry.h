@@ -4,16 +4,19 @@
 
 
 int main() {
-	std::cout << "Main Entry.h\n";
+	VIEngine::Logger::Init();
+	CORE_LOG_INFO("Main >> Entry.h");
 	VIEngine::Application* application = VIEngine::CreateApplication();
-	std::cout << "After CreateApplication Entry.h\n";
+	CORE_LOG_INFO("After CreateApplication >> Entry.h");
 	if (application->Init()) {
-		std::cout << "Init Entry.h\n";
+		CORE_LOG_INFO("Init VIEngine::Application >> Entry.h");
 		application->Run();
 	}
 
 	application->Shutdown();
-	delete application;
+	VI_FREE_MEMORY(application);
+
+	std::cin.get();
 
 	return 0;
 }

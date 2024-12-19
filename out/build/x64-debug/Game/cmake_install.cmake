@@ -1,8 +1,8 @@
-# Install script for directory: D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Game
+# Install script for directory: D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/Game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/install/x64-debug")
+  set(CMAKE_INSTALL_PREFIX "D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/install/x64-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -39,7 +39,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
       
       The C compiler identification is MSVC, found in:
-        D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CompilerIdC/CMakeCCompilerId.exe
+        D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CompilerIdC/CMakeCCompilerId.exe
       
   -
     kind: "message-v1"
@@ -51,7 +51,7 @@ events:
     message: |
       Detecting C compiler /showIncludes prefix:
         main.c
-        Note: including file: D:\\241002_LearningPrograming\\241005_SetupLogger\\GameEngine\\GameEngine\\out\\build\\x64-debug\\CMakeFiles\\ShowIncludes\\foo.h
+        Note: including file: D:\\241002_LearningPrograming\\241006_precompileHeaderfile\\GameEngine\\out\\build\\x64-debug\\CMakeFiles\\ShowIncludes\\foo.h
         
       Found prefix "Note: including file: "
   -
@@ -85,7 +85,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
       
       The CXX compiler identification is MSVC, found in:
-        D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CMakeCXXCompilerId.exe
+        D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CMakeCXXCompilerId.exe
       
   -
     kind: "message-v1"
@@ -97,7 +97,7 @@ events:
     message: |
       Detecting CXX compiler /showIncludes prefix:
         main.c
-        Note: including file: D:\\241002_LearningPrograming\\241005_SetupLogger\\GameEngine\\GameEngine\\out\\build\\x64-debug\\CMakeFiles\\ShowIncludes\\foo.h
+        Note: including file: D:\\241002_LearningPrograming\\241006_precompileHeaderfile\\GameEngine\\out\\build\\x64-debug\\CMakeFiles\\ShowIncludes\\foo.h
         
       Found prefix "Note: including file: "
   -
@@ -109,8 +109,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-b0i4rd"
-      binary: "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-b0i4rd"
+      source: "D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-mvhwlt"
+      binary: "D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-mvhwlt"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Ob0 /Od /RTC1"
@@ -120,11 +120,11 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-b0i4rd'
+        Change Dir: 'D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-mvhwlt'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_a80d6
-        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_a80d6.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_a80d6.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_a80d6.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_a80d6.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_a80d6.exe /implib:cmTC_a80d6.lib /pdb:cmTC_a80d6.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_9492c
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_9492c.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_9492c.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_9492c.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_9492c.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_9492c.exe /implib:cmTC_9492c.lib /pdb:cmTC_9492c.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -164,8 +164,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-qruwip"
-      binary: "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-qruwip"
+      source: "D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-zqvcfb"
+      binary: "D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-zqvcfb"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Ob0 /Od /RTC1"
@@ -176,11 +176,11 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-qruwip'
+        Change Dir: 'D:/241002_LearningPrograming/241006_precompileHeaderfile/GameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-zqvcfb'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_7e41d
-        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_7e41d.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_7e41d.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_7e41d.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7e41d.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_7e41d.exe /implib:cmTC_7e41d.lib /pdb:cmTC_7e41d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_067d4
+        [1/2] C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_067d4.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_067d4.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_067d4.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1441~1.341\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_067d4.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_067d4.exe /implib:cmTC_067d4.lib /pdb:cmTC_067d4.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
