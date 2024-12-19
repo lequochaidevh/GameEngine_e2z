@@ -6,6 +6,8 @@
 #include "Core/Logger/Logger.h"
 #include "Core/Memory/MemoryAllocator.h"
 
+#define STACK_MEMORY_ALLOCATOR
+
 void testCaseMemoryAllocator(VIEngine::MemoryAllocator* mAllocator);
 class GameplayLayer : public VIEngine::Layer {
 public:
@@ -34,13 +36,19 @@ private:
 void testCaseMemoryAllocator(VIEngine::MemoryAllocator* mAllocator) {
 	size_t size = 128 * 1024 * 1024;
 	void* address = malloc(size);
+#ifdef LINEAR_MEMORY_ALLOCATOR 
 	mAllocator = new VIEngine::LinearAllocator(size, address);
+#elif defined(STACK_MEMORY_ALLOCATOR)
+	mAllocator = new VIEngine::StackAllocator(size, address);
+#endif // LINEAR_MEMORY_ALLOCATOR 
+
 	struct GameObject {
 		size_t ID = 0;
 		std::string Name = "GameObject";
 	};
 
 	std::vector<GameObject*> gameObjects;
+
 	for (int i = 0; i < 10000; i++) {
 		void* memory = mAllocator->memAllocate(sizeof(GameObject), alignof(GameObject));
 		GameObject* go = new (memory)GameObject();
@@ -49,8 +57,17 @@ void testCaseMemoryAllocator(VIEngine::MemoryAllocator* mAllocator) {
 		gameObjects.emplace_back(go);
 	}
 
+#ifdef LINEAR_MEMORY_ALLOCATOR 
 	mAllocator->memClear();
+#elif defined(STACK_MEMORY_ALLOCATOR)
+	/*Clear Memory 1 stack*/
+	for (auto iter = gameObjects.rbegin(); iter != gameObjects.rend(); ++iter) {
+		mAllocator->memFree(*iter);
+	}
+#endif // LINEAR_MEMORY_ALLOCATOR 
+	
 	gameObjects.clear();
+
 	for (int i = 0; i < 10000; i++) {
 		void* memory = mAllocator->memAllocate(sizeof(GameObject), alignof(GameObject));
 		GameObject* go = new (memory)GameObject();
