@@ -1,0 +1,264 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Game/Game.exe"
+		},
+		{
+			"path" : "Game/Game.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"Game/CMakeLists.txt",
+			"Engine/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 17,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI"
+				},
+				{
+					"fragment" : "/YcD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "DYNAMIC_BUILD=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "DYNAMIC_LIB=0"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Engine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Engine/VIEngine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Vendors/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"precompileHeaders" : 
+			[
+				{
+					"backtrace" : 2,
+					"header" : "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Engine/VIEngine/pch.h"
+				}
+			],
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++17 -ZI"
+				},
+				{
+					"fragment" : "/YuD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx /FpD:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/./cmake_pch.cxx.pch /FID:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "DYNAMIC_BUILD=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "DYNAMIC_LIB=0"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Engine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Engine/VIEngine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Vendors/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"precompileHeaders" : 
+			[
+				{
+					"backtrace" : 2,
+					"header" : "D:/241002_LearningPrograming/241005_SetupLogger/GameEngine/GameEngine/Engine/VIEngine/pch.h"
+				}
+			],
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "VIEngine::@8f69bdd092c897d92c1e"
+		}
+	],
+	"id" : "Game::@971b28586fb25e7ff763",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-LIBPATH:D:\\241002_LearningPrograming\\241005_SetupLogger\\GameEngine\\GameEngine\\Vendors\\bin",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "Engine\\VIEngine.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "spdlogd.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Game",
+	"nameOnDisk" : "Game.exe",
+	"paths" : 
+	{
+		"build" : "Game",
+		"source" : "Game"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		},
+		{
+			"name" : "Precompile Header File",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.cxx",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Game/Source/Game.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"path" : "out/build/x64-debug/Game/CMakeFiles/Game.dir/cmake_pch.hxx",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}
