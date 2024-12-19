@@ -25,10 +25,13 @@ namespace VIEngine {
 		}
 
 		template<typename T>
-		void dispatchListener(const T& evenContext) {
+		void dispatchEventListener(const T& evenContext) {
 			VI_STATIC_ASSERT(std::is_base_of<EventContext, T>::value && "dispatch invalid EventContext");
 			const char* eventType = typeid(T).name();
-			VI_ASSERT(mEventActionMap.find(eventType) != mEventActionMap.end() && "Unknow event type");
+			//VI_ASSERT(mEventActionMap.find(eventType) != mEventActionMap.end() && "Unknow event type"); // error: 
+			if (mEventActionMap.find(eventType) == mEventActionMap.end()) {
+				return;
+			}
 			for (auto eventAction : mEventActionMap.at(eventType)) {
 				if (eventAction->execute(&evenContext)) {
 					break;
